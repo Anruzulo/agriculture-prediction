@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Predicción de Rendimiento Agrícola</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Predicción de Rendimiento Agrícola</h1>
+            <p>Ingresa los datos para predecir el rendimiento de tus cultivos.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label for="country">Selecciona el País:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Seleccionar País</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="crop">Selecciona el Cultivo:</label>
+                    <select id="crop" name="crop" required>
+                        <option value="">Seleccionar Cultivo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="year">Ingresa el Año:</label>
+                    <input type="number" id="year" name="year" required>
+                </div>
+                <div class="form-group">
+                    <label for="averageRainfall">Lluvia Promedio (mm/año):</label>
+                    <input type="number" id="averageRainfall" name="averageRainfall" required>
+                </div>
+                <div class="form-group">
+                    <label for="pesticides">Uso de Pesticidas (toneladas):</label>
+                    <input type="number" id="pesticides" name="pesticides" required>
+                </div>
+                <div class="form-group">
+                    <label for="avgTemp">Temperatura Promedio (°C):</label>
+                    <input type="number" id="avgTemp" name="avgTemp" required>
+                </div>
+                <button type="submit" id="predictBtn">Predecir Rendimiento</button>
+            </form>
+
+            <div id="predictionResult" class="hidden">
+                <h3>Resultado de la Predicción:</h3>
+                <div id="resultBox">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
